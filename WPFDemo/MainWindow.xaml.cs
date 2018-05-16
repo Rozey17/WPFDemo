@@ -37,7 +37,10 @@ namespace WPFDemo
             MessageBox.Show($"Hello {firstNameText.Text}");
         }
 
-       
+        private void firstNameText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 
     public class Person

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFDemo"
         mc:Ignorable="d"
         Title="Our WPF Demo" Height="450" Width="800">
-    <Grid Margin="0,2,0,-2">
+    <Grid Margin="-2,10,2,-10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="auto"/>
@@ -26,16 +26,17 @@
         <TextBlock Grid.Column="1" Grid.Row="1" FontSize="28">
             Hello World
         </TextBlock>
-        <Button Content="Button" Grid.Column="4" HorizontalAlignment="Left" Margin="207,126,0,0" Grid.Row="4" VerticalAlignment="Top" Width="93" Height="55" Click="Button_Click"/>
-        <TextBlock Grid.Column="4" HorizontalAlignment="Left" Margin="66,54,0,0" Grid.Row="4" TextWrapping="Wrap" Text="FirstName" VerticalAlignment="Top" Height="26" Width="69" RenderTransformOrigin="0.515,1.247"/>
-        <TextBox x:Name="firstNameText" Grid.Column="4" HorizontalAlignment="Left" Height="23" Margin="180,44,0,0" Grid.Row="4" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.508,1.415"/>
-        <ComboBox x:Name="myComboBox" Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="3" Width="150" Margin="10,126,445,161">
+        <Button Content="Button" Grid.Column="1" Grid.Row="3" Margin="70,215,6,92" Click="Button_Click" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Column="1"  Grid.Row="3"  Text="FirstName" Margin="0,86,123,272" />
+        <TextBox x:Name="firstNameText" Grid.Column="1" Grid.Row="3" Margin="70,79,331,272"  Grid.ColumnSpan="3" />
+        <ComboBox Grid.Column="1" Grid.Row="3" x:Name="myComboBox" Margin="70,129,368,187" Grid.ColumnSpan="3" >
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding FullName}"/>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
+        <Image Grid.Column="3"  Grid.RowSpan="5" Source="C:\Nouveau dossier\DAYDREAMIN\176_1000.jpg" Margin="86,0,0,0"/>
 
     </Grid>
 </Window>
